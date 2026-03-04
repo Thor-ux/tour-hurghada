@@ -1,0 +1,153 @@
+/* Full-page layout */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #ce1126, #fff, #000); /* Red-White-Black Egypt flag */
+    color: #202020;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #ce1126;
+}
+
+/* Sections stretch full width */
+section {
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fdf6e3; /* light goldish */
+}
+
+/* Section headings */
+section h2, section p, section ul {
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #000;
+}
+
+/* Images container */
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+/* Images: maintain aspect ratio */
+.images img {
+    width: auto;
+    max-width: 300px;
+    max-height: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ce1126;
+    object-fit: cover; /* prevent squeeze */
+}
+
+/* Center WhatsApp button */
+.contact {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe57;
+}
+
+/* Reviews */
+.reviews {
+    border-top: 2px solid #ce1126;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.review {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.stars { color: #FFD700; }
+
+.add-review input,
+.add-review textarea,
+.add-review select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.add-review button {
+    background-color: #ce1126;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-review button:hover {
+    background-color: #a50f1c;
+}
+
+@media (max-width: 600px) {
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images img {
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+footer {
+    background-color: #000; /* black like Egypt flag */
+    color: #ffd700; /* gold text */
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    border-top: 3px solid #ce1126; /* red line */
+}
